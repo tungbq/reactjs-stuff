@@ -76,11 +76,17 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
+	reloadGame() {
+		window.location.reload();
+	}
 	render() {
 		return (
 			<div className='game'>
 				<div className='game-board'>
 					<Board />
+					<button className='replay' onClick={() => this.reloadGame()}>
+						Replay
+					</button>
 				</div>
 
 				<div className='game-info'>
